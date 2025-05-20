@@ -8,13 +8,11 @@ A full-stack Kanban board application with secure JWT-based authentication, buil
 
 ![Krazy Kanban Board Screenshot](./Assets/Screen%20Shot%202025-05-20%20at%201.07.09%20PM.png)  
 
-
 ---
 
 ## Live Demo
 
 [Deployed App on Render](https://kanbanboard-suje.onrender.com)  
-
 
 ---
 

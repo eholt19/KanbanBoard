@@ -1,7 +1,7 @@
 import { UserLogin } from "../interfaces/UserLogin";
 
 const login = async (userInfo: UserLogin) => {
-  const response = await fetch('/api/auth/login', {
+  const response = await fetch('https://kanbanboard-suje.onrender.com/auth/login', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(userInfo),
@@ -11,8 +11,7 @@ const login = async (userInfo: UserLogin) => {
     throw new Error('Login failed');
   }
 
-  const data = await response.json();
-  return data;
+  return await response.json();
 };
 
 export { login };
