@@ -13,8 +13,8 @@ A full-stack Kanban board application with secure JWT-based authentication, buil
 
 ## Live Demo
 
-[Deployed App on Render](https://your-render-deployment-url.com)  
-_(Replace with your live Render URL)_
+[Deployed App on Render](https://kanbanboard-suje.onrender.com)  
+
 
 ---
 
