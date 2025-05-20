@@ -4,36 +4,39 @@ A full-stack Kanban board application with secure JWT-based authentication, buil
 
 ---
 
-## Screenshot
+## 📸 Screenshot
 
 ![Krazy Kanban Board Screenshot](./Assets/Screen%20Shot%202025-05-20%20at%201.07.09%20PM.png)  
 
 ---
 
-## Live Demo
+## 🚀 Live Demo
 
-[Deployed App on Render](https://kanbanboard-suje.onrender.com)  
+- **Frontend (Netlify):** https://scintillating-gaufre-fd3fbc.netlify.app  
+- **Backend (Render API):** https://kanbanboard-suje.onrender.com
 
----
-
-## GitHub Repository
-
-[https://github.com/eholt19/KanbanBoard](https://github.com/eholt19/KanbanBoard)
+> 🔧 Note: Authentication and routing are fully functional. Users can log in, store JWTs, and access protected Kanban features.
 
 ---
 
-## Features
+## 📂 GitHub Repository
 
-- Secure login via JSON Web Tokens (JWT)
-- Logout clears token and redirects to login
+https://github.com/eholt19/KanbanBoard
+
+---
+
+## ✅ Features
+
+- Secure login with JSON Web Tokens (JWT)
+- Logout clears token and redirects to login page
 - Auth token stored in `localStorage`
-- Protected routes redirect unauthenticated users
-- Drag-and-drop Kanban columns for:
-  - To do
+- Protected routes for authenticated users only
+- Kanban board with ticket statuses:
+  - To Do
   - In Progress
   - Done
-- Create and edit tickets
-- Fully deployed full-stack app
+- Create, assign, and edit tickets
+- Deployed with separate backend (Render) and frontend (Netlify)
 
 ---
 
@@ -50,14 +53,14 @@ A full-stack Kanban board application with secure JWT-based authentication, buil
 - Express
 - Sequelize ORM
 - PostgreSQL
-- Bcrypt
-- JSON Web Tokens
+- bcryptjs
+- JSON Web Tokens (JWT)
 
 ---
 
-## Getting Started Locally
+## 🧪 Getting Started Locally
 
-1. Clone the repository
+1. Clone the repo
 
 ```bash
 git clone https://github.com/eholt19/KanbanBoard.git
@@ -88,14 +91,14 @@ DB_PASSWORD='your_password'
 JWT_SECRET_KEY='supersecret123'
 ```
 
-5. Start servers
+5. Run development servers
 
 ```bash
-# In one terminal
+# Terminal 1
 cd server
 npm run dev
 
-# In another terminal
+# Terminal 2
 cd client
 npm run dev
 ```
@@ -105,61 +108,45 @@ npm run dev
 
 ---
 
-## User Story
+## 💡 User Story
 
-```
 AS a member of an agile team  
 I WANT a Kanban board with a secure login page  
 SO THAT I can securely access and manage my work tasks
-```
 
 ---
 
-## Acceptance Criteria
+## ✅ Acceptance Criteria
 
-- Login with username and password
-- JWT is generated and stored client-side
-- Access to board requires authentication
-- Invalid credentials return error message
-- Logging out removes the token and redirects
-- Session expires after a set time
-
----
-
-## Environment Variables
-
-Inside `server/.env`:
-
-```env
-DB_NAME='kanban_db'
-DB_USER='your_postgres_user'
-DB_PASSWORD='your_password'
-JWT_SECRET_KEY='supersecret123'
-```
+- Login form collects username and password
+- Valid credentials generate a JWT and redirect to board
+- Invalid credentials show an error
+- Authenticated requests pass JWT in headers
+- Logging out clears JWT and redirects to login
+- Session expires after timeout
+- Unauthenticated users are redirected to login page
 
 ---
 
-## Deployment
+## 🌍 Deployment Details
 
-Deployed using Render with:
+This app is deployed with:
 
-- Express + PostgreSQL server
-- Vite React frontend
-- Environment variables stored securely
+- **Backend (Render)** — Express server + PostgreSQL  
+- **Frontend (Netlify)** — Vite + React
 
-Deployment guide:  
-[Deploy with Render and PostgreSQL](https://coding-boot-camp.github.io/full-stack/render/deploy-with-render-and-postgresql)
+Environment variables securely configured in both services.  
+Deployment guide: https://coding-boot-camp.github.io/full-stack/render/deploy-with-render-and-postgresql
 
 ---
 
-## Author
+## 👩‍💻 Author
 
 **Emily Holt**  
-[GitHub: @eholt19](https://github.com/eholt19)
+GitHub: https://github.com/eholt19
 
 ---
 
-## License
+## 🪪 License
 
 This project is licensed under the [MIT License](LICENSE).
-
